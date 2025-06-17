@@ -37,6 +37,19 @@ button {
   cursor: pointer;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  white-space: nowrap;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(100%);
+  border: 0;
+}
+
 /* CONTEINER */
 
 .container {
@@ -119,6 +132,10 @@ button {
 
 @media screen and (min-width: 768px) {
   .burger-btn {
+    display: none;
+  }
+
+  .mobile-menu {
     display: none;
   }
 
@@ -231,8 +248,8 @@ button {
   visibility: hidden;
   pointer-events: none;
 
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 500ms cubic-bezier(0.4, 0, 0.2, 1);
   transform: translateX(-100%);
   z-index: 999;
 }
@@ -274,13 +291,13 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 500ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .mobile-close-svg {
   width: 8px;
   height: 8px;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .mobile-menu-nav {
@@ -300,7 +317,7 @@ button {
   line-height: 111%;
   letter-spacing: 0.02em;
   color: #2e2f42;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .mobile-menu-item:hover,
@@ -325,7 +342,7 @@ button {
   letter-spacing: 0.02em;
   font-style: normal;
   color: #434455;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .mobile-address-item:hover,
@@ -359,7 +376,7 @@ button {
   border-radius: 50%;
   background-color: #4D5AE5;
   fill: #F4F4FD;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .mobile-social-svg {
@@ -373,8 +390,533 @@ button {
   background-color: #404bbf;
 }
 
+/* SECTION 1 MOB */
+
+.main-section {
+  background-color: #2e2f42;
+  text-align: center;
+  padding: 72px 52px;
+  min-width: 320px;
+  width: 100%;
+  background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)),
+    url(../images/mob/mob-people-office.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@media screen and (min-resolution: 2x) {
+  .main-section {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)),
+      url(../images/mob/mob-people-office-x2.jpg);
+  }
+}
+
+.main-title {
+  font-weight: 700;
+  font-size: 36px;
+
+  line-height: 1.07;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  max-width: 216px;
+  margin: 0 auto;
+  margin-bottom: 72px;
+}
+
+/* SECTION 1 BTN */
+
+.order-service {
+  background-color: #4D5AE5;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  display: block;
+  min-width: 169px;
+  height: 56px;
+  border: none;
+  border-radius: 4px;
+  margin: 0 auto;
+  transition: background-color 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.order-service:hover,
+.order-service:focus {
+  background-color: #404bbf;
+}
+
+/* SECTION 1 TAB */
+
 @media screen and (min-width: 768px) {
-  .mobile-menu {
-    display: none;
+  .main-section {
+    min-width: 768px;
+    padding: 123px 136px;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)),
+      url(../images/tab/tab-people-office.jpg);
+
+  }
+
+  .main-title {
+    font-size: 56px;
+    min-width: 496px;
+    margin-bottom: 36px;
+
+  }
+
+  @media screen and (min-resolution: 2x) {
+    .main-section {
+      background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)),
+        url(../images/tab/tab-people-office-x2.jpg);
+    }
+  }
+}
+
+/* SECTION 1 DESK */
+
+@media screen and (min-width: 1158px) {
+  .main-section {
+    min-width: 1440px;
+    padding: 188px 0;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)),
+      url(../images/people-office.jpg)
+  }
+
+  .main-title {
+    margin-bottom: 48px;
+  }
+}
+
+@media screen and (min-resolution: 2x) {
+  .main-section {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)),
+      url(../images/desk/people-office-x2.jpg);
+  }
+}
+
+/* MODAL */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(46, 47, 66, 0.4);
+  z-index: 999;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 500ms cubic-bezier(0.4, 0, 0.2, 1)
+}
+
+.backdrop.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* MODAL POSITION */
+
+.modal {
+  position: absolute;
+  padding: 72px 16px 24px 16px;
+  top: 50%;
+  left: 50%;
+  max-width: 320px;
+  min-height: 584px;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
+  background-color: #fcfcfc;
+  border-radius: 4px;
+  transform: translate(-50%, -50%);
+  overflow: auto;
+  transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+/* MODAL HIDEN */
+
+.backdrop:not(.is-open) .modal {
+  transform: translate(-100%, -100%)
+}
+
+/* BTN "X" */
+
+.modal-close-btn {
+  content: '';
+  position: absolute;
+  right: 24px;
+  top: 24px;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #e7e9fc;
+  stroke-width: 1px;
+  color: #2e2f42;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+  transition: background-color 500ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close-svg {
+
+  width: 8px;
+  height: 8px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  background-color: #404bbf;
+  fill: #fff;
+  border: none;
+}
+
+/* MODAL style text */
+
+.modal-text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #2e2f42;
+  margin-bottom: 16px;
+
+}
+
+.modal-form {
+  margin-bottom: 8px;
+
+}
+
+/* styles in fillable fields */
+
+.form-label {
+  display: block;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 117%;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+  margin-bottom: 4px;
+
+}
+
+.modal-input-form {
+  position: relative;
+
+
+}
+
+/* change the color of fields to fill in */
+
+.modal-input {
+
+  width: 100%;
+  padding-left: 38px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  background-color: transparent;
+  outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 4px;
+  min-width: 256px;
+  height: 40px;
+
+}
+
+.modal-input:focus,
+.modal-input:active {
+  border: 1px solid #4d5ae5;
+
+}
+
+/* setting icons in fields to fill in */
+
+.form-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 16px;
+
+  width: 18px;
+  height: 24px;
+  fill: #2e2f42;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.modal-input:focus+.form-icon,
+.modal-input:active+.form-icon {
+  fill: #4d5ae5;
+}
+
+/* feedback field settings */
+
+.textarea {
+  margin-top: 4px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  width: 100%;
+  height: 120px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  background-color: transparent;
+  outline: transparent;
+  padding: 8px 16px;
+  resize: none;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.textarea:focus {
+  border-color: #4d5ae5;
+  outline: none;
+}
+
+/* Check box */
+
+.checkbox-container {
+  margin-top: 16px;
+  margin-bottom: 24px;
+  max-width: 256px;
+
+}
+
+.checkbox-label {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+  min-width: 231px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+
+}
+
+
+.checkbox-span {
+  display: inline-flex;
+  width: 16px;
+  height: 16px;
+
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
+  transition: background-color 500ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 500ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  align-items: center;
+  justify-content: center;
+  fill: transparent;
+  margin-right: 8px;
+  margin-top: 8px;
+
+}
+
+
+.modal-checkbox:checked+.checkbox-label .checkbox-span {
+
+  background-color: #404bbf;
+  border: none;
+  fill: #F4F4FD;
+}
+
+.checkbox-link {
+  color: #4d5ae5;
+  text-decoration: underline;
+  margin-left: 24px;
+}
+
+/* BIG BLUE BTN "SEND" */
+
+.modal-btn {
+  display: block;
+
+  height: 56px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  cursor: pointer;
+  background-color: #4D5AE5;
+  border: none;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 4px;
+  padding: 16px 32px;
+  margin: 0 auto;
+  min-width: 169px
+}
+
+.modal-btn:hover,
+.modal-btn:focus {
+  background-color: #404bbf;
+}
+
+/* SIZE MODAL IN TAB AND DESK */
+
+@media screen and (min-width: 768px) {
+  .modal {
+    padding: 72px 24px 24px 24px;
+    max-width: 408px;
+
+  }
+
+  .checkbox-label {
+    min-width: 360px;
+
+  }
+
+  .checkbox-link {
+    margin-left: 4px;
+  }
+
+  .checkbox-span {
+    margin-top: 0;
+  }
+}
+
+/* SECTION 2 MOB */
+
+.features {
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+
+/* зробив у списку перенос варп-варп и проміжки вниз по 72px */
+
+.features-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 72px;
+
+}
+
+/* контейнер займає весь простір в моб версії */
+
+.features-list-item {
+  width: 100%;
+}
+
+/* Налаштування стилю заголовків (моб) */
+
+.features-subtitle {
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  margin-bottom: 8px;
+  font-weight: 700;
+  font-size: 36px;
+  text-align: center;
+}
+
+/* Налаштування стилю тексту переваг (моб) */
+
+.features-ourteam-text {
+
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+  font-size: 16px;
+  color: #434455;
+}
+
+/* в моб і таб версії відсутні векторні зображення */
+
+.features-icons-cont {
+  display: none;
+}
+
+.features-svg {
+  display: none;
+}
+
+/* адаптування під ТАБ */
+
+@media screen and (min-width: 768px) {
+  .features-list {
+    max-width: 736px;
+    gap: 24px;
+    row-gap: 72px;
+  }
+
+  .features-subtitle {
+    text-align: left;
+  }
+
+  /* переналаштування з "1 в колонку" в "2х2" */
+
+  .features-list-item {
+    width: calc((100% - 24px) / 2);
+  }
+}
+
+/* адаптування під ДЕСК */
+
+@media screen and (min-width: 1158px) {
+  .features {
+    padding: 120px 0;
+  }
+
+  .features-list {
+    max-width: 1128px;
+    gap: 24px;
+  }
+
+  /* певернення до істоків */
+
+  .features-list-item {
+    width: calc((100% - 72px) / 4);
+  }
+
+  .features-subtitle {
+    font-weight: 500;
+    font-size: 20px;
+  }
+
+  .features-ourteam-text {
+    font-weight: 500;
+    font-size: 16px;
+  }
+
+  .features-icons-cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 8px;
+    border: 1px solid #8e8f99;
+    border-radius: 4px;
+    height: 112px;
+    background: #f4f4fd;
+  }
+
+  .features-svg {
+    display: flex;
+    width: 64px;
+    height: 64px;
   }
 }
