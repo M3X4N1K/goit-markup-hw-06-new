@@ -831,10 +831,12 @@ button {
 
   line-height: 1.5;
   letter-spacing: 0.02em;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 16px;
   color: #434455;
 }
+
+
 
 /* в моб і таб версії відсутні векторні зображення */
 
@@ -850,7 +852,7 @@ button {
 
 @media screen and (min-width: 768px) {
   .features-list {
-    max-width: 736px;
+
     gap: 72px 24px;
   }
 
@@ -860,7 +862,7 @@ button {
 
   .features-list-item {
     width: 356px;
-    height: 120px;
+
   }
 }
 
@@ -872,13 +874,15 @@ button {
 
 /* адаптування під ДЕСК */
 
+
+
 @media screen and (min-width: 1158px) {
   .features {
     padding: 120px 0;
   }
 
   .features-list {
-    max-width: 1128px;
+
     gap: 24px;
   }
 
@@ -894,9 +898,11 @@ button {
   }
 
   .features-ourteam-text {
-    font-weight: 500;
+    font-weight: 400;
     font-size: 16px;
   }
+
+
 
   .features-icons-cont {
     display: flex;
@@ -1041,6 +1047,7 @@ button {
 
   .our-team-item {
     width: calc((100% - 72px) / 4);
+    background-color: #fff;
   }
 
   .container .team-list {
@@ -1217,6 +1224,7 @@ button {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  padding-bottom: 72px;
 
 }
 
@@ -1237,7 +1245,7 @@ button {
   display: block;
   text-align: center;
   margin: 0 auto;
-  padding-bottom: 16px;
+  margin-bottom: 16px;
 }
 
 
@@ -1405,10 +1413,10 @@ button {
 
   }
 
-  .logo {
-    margin-left: 0;
-    margin-bottom: 16px;
 
+
+  .footer-logo {
+    margin-left: 0;
   }
 
   .footer-text {
@@ -1432,7 +1440,7 @@ button {
   .footer-form {
     flex-direction: row;
     align-items: center;
-    margin-bottom: 72px;
+
 
   }
 
@@ -1454,16 +1462,19 @@ button {
   .page-footer .container {
 
     flex-wrap: nowrap;
-    align-items: space-between;
+    align-items: baseline;
     max-width: 1158px;
+    padding-left: 15px;
   }
 
   .logo-text {
     margin-right: 120px;
+    padding-bottom: 0;
   }
 
   .footer-social {
     margin-right: 80px;
+    margin-bottom: 0;
   }
 
 
